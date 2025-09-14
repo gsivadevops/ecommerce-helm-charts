@@ -9,3 +9,16 @@ It includes charts for the following core services:
 - **MySQL** (Relational database for orders)  
 - **Catalogue Service** (Node.js service serving product catalogue)  
 - **Redis** (In-memory cache for sessions)  
+
+# EBS Install drivers with Helm
+-------------------------
+Add the aws-ebs-csi-driver Helm repository.
+
+    helm repo add aws-ebs-csi-driver https://kubernetes-sigs.github.io/aws-ebs-csi-driver
+    helm repo update
+
+Install the latest release of the driver.
+
+    helm upgrade --install aws-ebs-csi-driver \
+        --namespace kube-system \
+        aws-ebs-csi-driver/aws-ebs-csi-driver
