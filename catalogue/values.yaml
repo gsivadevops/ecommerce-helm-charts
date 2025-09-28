@@ -1,5 +1,5 @@
 deployment:
-  imageURL: joindevops/catalogue
+  imageURL: gsivadvops/catalogue
   imageVersion: v1
 hpa:
   maxReplicas: 10
